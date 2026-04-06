@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 25% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+    --primary: 155 70% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 25% 15%;
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 50%;
+    --accent: 260 60% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 155 70% 40%;
+    --radius: 0.75rem;
+    --chart-income: 155 70% 40%;
+    --chart-expense: 0 72% 55%;
+    --chart-savings: 210 80% 55%;
+    --sidebar-background: 220 25% 12%;
+    --sidebar-foreground: 220 10% 80%;
+    --sidebar-primary: 155 70% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 155 70% 45%;
+    --gradient-primary: linear-gradient(135deg, hsl(155 70% 40%), hsl(170 65% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(260 60% 55%), hsl(280 60% 50%));
+    --gradient-warm: linear-gradient(135deg, hsl(30 85% 55%), hsl(15 80% 55%));
+    --shadow-card: 0 1px 3px hsl(220 25% 10% / 0.04), 0 4px 12px hsl(220 25% 10% / 0.06);
+    --shadow-card-hover: 0 4px 16px hsl(220 25% 10% / 0.08), 0 8px 24px hsl(220 25% 10% / 0.1);
+  }
+
+  .dark {
+    --background: 220 25% 7%;
+    --foreground: 220 10% 92%;
+    --card: 220 22% 11%;
+    --card-foreground: 220 10% 92%;
+    --popover: 220 22% 11%;
+    --popover-foreground: 220 10% 92%;
+    --primary: 155 70% 45%;
+    --primary-foreground: 220 25% 7%;
+    --secondary: 220 20% 16%;
+    --secondary-foreground: 220 10% 85%;
+    --muted: 220 20% 16%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 260 60% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 155 70% 45%;
+    --chart-income: 155 70% 45%;
+    --chart-expense: 0 72% 55%;
+    --chart-savings: 210 80% 60%;
+    --sidebar-background: 220 28% 8%;
+    --sidebar-foreground: 220 10% 75%;
+    --sidebar-primary: 155 70% 45%;
+    --sidebar-primary-foreground: 220 25% 7%;
+    --sidebar-accent: 220 22% 14%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 22% 14%;
+    --sidebar-ring: 155 70% 45%;
+    --shadow-card: 0 1px 3px hsl(0 0% 0% / 0.2), 0 4px 12px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 4px 16px hsl(0 0% 0% / 0.3), 0 8px 24px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border rounded-xl;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  .glass-card:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+}
