@@ -20,7 +20,7 @@ FinFlow is a financial management application designed to help users track expen
 ## 📦 Installation
 
 1. Clone the repository:
-   git clone https://github.com/Chaitanya-365/fintech-dashboard-app.git
+   git clone https://github.com/Chaitanya-365/FinFlow.git
 
 2. Navigate to the project folder:
    cd fintech-dashboard-app
